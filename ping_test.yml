@@ -1,6 +1,6 @@
 ---
 - name: ping test
-  host: target
+  hosts: target
   gether_facts: false
   tasks:
   - nmae: ping
