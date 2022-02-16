@@ -1,6 +1,7 @@
 ---
 - name: touch files test
   hosts: target
+  remote_user: root
   tasks:
   - name: create directory
     file:
