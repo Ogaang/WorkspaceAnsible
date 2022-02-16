@@ -3,5 +3,5 @@
   hosts: target
   gather_facts: false
   tasks:
-  - nmae: ping
+  - name: ping
     ping:
