@@ -1,6 +1,6 @@
 ---
 - name: touch files test
-  host: target
+  hosts: target
   tasks:
   - name: create directory
     file:
