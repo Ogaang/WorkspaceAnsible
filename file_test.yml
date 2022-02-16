@@ -9,7 +9,7 @@
 - name: touch files test
   hosts: target
   remote_user: ansible
-  sudo: yes
+  become: yes
   gather_facts: False
   tasks:
   - name: create directory
@@ -23,4 +23,4 @@
       state: touch
   
   - name: create file
-    command: ls -l > /home/worker/test/test.txt 
+    command: "ls -l > /home/worker/test/ouput.txt" 
