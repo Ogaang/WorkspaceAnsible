@@ -1,0 +1,26 @@
+---
+- name: touch files sample
+  host: 172.30.1.29
+  remote_user: root
+  gather_facts: True
+  tasks:
+    - name: touch file
+      file:
+        path: /home/control/sample.txt
+        state: touch
+
+- name: copy file sample
+  host: 172.30.1.36
+  gather_facts: False
+  tasks:
+    -name: copy file
+      shell: "cp /home/control/sample.txt /home/worker/data/"
+
+- name: copy file sample
+  host: 172.30.1.9
+  gather_facts: False
+  tasks:
+    -name: copy file
+      shell: "cp /home/control/sample.txt /home/ansible/data/"
+
+  
